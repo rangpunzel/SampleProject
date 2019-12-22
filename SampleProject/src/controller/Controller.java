@@ -52,7 +52,7 @@ public class Controller {
 				System.out.println("프로그램 종료");
 				break;
 			}
-		}while(menu != 0);
+		}while(menu != 0); //입력이 0이 아니면 do-while문 반복
 		
 	}
 

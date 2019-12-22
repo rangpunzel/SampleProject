@@ -11,7 +11,7 @@ import data.Session;
 
 public class UserServiceImpl implements UserService {
 	
-	//???????????????????????
+
 	private static UserServiceImpl instance;
 	
 	private UserServiceImpl(){}
@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	UserDao userDao = UserDaoImpl.getInstance();
-		//   ▲
+
 	
 	@Override
 	public void join() {
@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
 		
 		UserVO user = new UserVO(); //user 객체 생성해서 VO에 등록
 		
-		user.setId(id);
+		user.setId(id); //스캐너로 받은 문자를 UserVO setid 메서드의 파라미터로 보냄.
 		user.setPassword(password);
 		user.setName(name);
 		
@@ -74,7 +74,7 @@ public class UserServiceImpl implements UserService {
 		if(user == null){
 			System.out.println("아이디 혹은 비밀번호를 잘못입력하셨습니다.");
 		}else{
-			Session.loginUser = user;
+			Session.loginUser = user;        //세션
 			System.out.println("로그인 성공!!");
 			System.out.println(user.getName() + "님 환영합니다.");
 		}
