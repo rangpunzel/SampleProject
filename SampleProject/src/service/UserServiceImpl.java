@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public void join() {
-		//회원가입
+		// 회원가입
 		
 		//회원가입 입력창
 		Scanner s = new Scanner(System.in);
